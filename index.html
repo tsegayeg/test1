@@ -21,31 +21,28 @@
         h1 {
             color: #333;
         }
-        .contact-options {
-            display: none;
-            margin-top: 20px;
-        }
-        .contact-options a {
-            display: block;
-            margin: 10px 0;
-            font-size: 18px;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .contact-options a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
 
     <h1>Contact Us</h1>
 
-    <!-- Single Image -->
-    <div onclick="showContactOptions()">
+    <!-- Single Image with Click Event -->
+    <div onclick="redirectToContact()">
         <img src="https://raw.githubusercontent.com/tsegayeg/test1/main/images/baggage.JPG" alt="Contact Us">
     </div>
 
-    <!-- Contact Options Menu (Initially Hidden) -->
-    <div class="contact-options" id="contactOptions">
- 
+    <script>
+        function redirectToContact() {
+            // Redirect to Call Us (Phone) in the same tab
+            window.location.href = "tel:+251940278146"; 
+
+            // After a short delay, open Telegram chat in a new tab
+            setTimeout(function() {
+                window.open("https://t.me/dadmom16", "_blank");
+            }, 500); // Delay to allow phone redirection before opening Telegram
+        }
+    </script>
+
+</body>
+</html>
