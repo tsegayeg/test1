@@ -21,24 +21,31 @@
         h1 {
             color: #333;
         }
+        .contact-option {
+            display: inline-block;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Single Image with Multiple Actions -->
-    <div onclick="redirectToContact()">
-        <img src="https://raw.githubusercontent.com/tsegayeg/test1/main/images/baggage.JPG" alt="Contact Us">
+    <h1>Contact Us</h1>
+
+    <!-- Phone Call Option -->
+    <div class="contact-option">
+        <a href="tel:+251940278146">
+            <img src="https://raw.githubusercontent.com/tsegayeg/test1/main/images/baggage.JPG" alt="Call Us">
+        </a>
+        <p>Call Us</p>
     </div>
 
-    <script>
-        function redirectToContact() {
-            // Open both phone call and Telegram chat in separate tabs
-            window.open('tel:+251940278146', '_self'); // Opens phone call
-            setTimeout(function(){
-                window.open('https://t.me/dadmom16', '_blank'); // Opens Telegram chat
-            }, 500); // Delay for the phone call to open before opening Telegram
-        }
-    </script>
+    <!-- Telegram Chat Option -->
+    <div class="contact-option">
+        <a href="https://t.me/dadmom16" target="_blank">
+            <img src="https://raw.githubusercontent.com/tsegayeg/test1/main/images/baggage.JPG" alt="Contact via Telegram">
+        </a>
+        <p>Contact Us via Telegram</p>
+    </div>
 
 </body>
 </html>
